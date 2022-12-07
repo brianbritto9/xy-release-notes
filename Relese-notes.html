@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relese Notes</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif !important;
+            color: #3c4257;
+            font-weight: 400;
+            font-size: 14px;
+            background-color: #fff;
+            margin: 0%;
+        }
+
+        .xy-section {
+            padding: 5%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-right: 230px; 
+        }
+
+        .xy-section-header {
+            color: #303346;
+            margin-bottom: 3%;
+            font-size: 220%;
+            font-family: Butler;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.1;
+            letter-spacing: -0.09px;
+            flex-grow: 1;
+        }
+
+        .xy-section-intro {
+            font-size: 16px;
+            line-height: 26px;
+            color: #4f566b;
+            margin-bottom: 24px;
+        }
+
+        .xy-section-content {
+            line-height: 1.5;
+            flex-grow: 1;
+            color: #4f566b;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            text-align: justify;
+        }
+
+
+        .date {
+            width: 60%;
+            height: 2%;
+            font-family: Butler;
+            font-size: 22px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #303346;
+            margin-bottom: 1%;
+            margin-top: 1%;
+            padding-top: 2%;
+            padding-bottom: 1.1%;
+            padding-right: 2%;
+            align-items: baseline;
+        }
+
+        .version {
+            width: 184px;
+            height: 21px;
+            font-weight: bold;
+            font-size: 14.5px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #303346;
+            margin-bottom: 0.3%;
+            margin-top: 1.1%;
+            padding-top: 1%;
+
+        }
+
+        .announcement-1 {
+            background-color: #FF9500;
+            margin-top: 8px;
+        }
+
+        .announcement-2 {
+            background-color: #22C55E;
+            margin-top: 8px;
+        }
+
+        .announcement-3 {
+            background-color: #ef4444;
+            margin-top: 8px;
+        }
+
+        .about-tags {
+            margin: 0%;
+            border-radius: 34px;
+            padding: 4px;
+            font-size: x-small;
+            font-weight: bold;
+            width: 90 px;
+            text-align: center;
+            color: white;
+            margin-top: 4px;
+            margin-right: 13px;
+            height: 10px;
+            padding-top: 5px;
+            padding-bottom: 8px;
+            min-width: 89px;
+
+        }
+
+
+        .xy-section-content-row {
+            padding-right: 2%;
+            line-height: 1.5;
+            flex-grow: 1;
+            color: #4f566b;
+            margin-left: 0;
+            margin-bottom: 4%;
+            display: flex;
+            margin-top: 1%;
+            text-align: justify;
+        }
+
+        p {
+            color: #303346;
+        }
+
+        .xy-quick-links {
+            padding-top: 20px;
+            position: fixed;
+            right: 0%;
+            float: right;
+            width: 215px;
+            height: 100%;
+            padding-left: 20px;
+            display: flex;
+        }
+         .xy-quick-links-ph {
+            width: 215px;
+            height: 100%;
+            padding-left: 20px;
+            display: flex;
+        }
+
+        .xy-li-style {
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin: 15px 63px 32px 9px;
+        }
+
+        .xy-line-style {
+            text-decoration: none;
+            color: #303346;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .xy-quick-links {
+                display: none !important;
+            }
+            .xy-section {
+                margin-right: 0% !important;
+            }  
+            .xy-quick-links-ph{
+                
+            }          
+        }
+        @media screen and (min-width: 800px) {
+            .xy-quick-links-ph{
+                display: none !important;
+            }  
+        }
+
+
+        .xy-section-col {
+            /* display: flex; */
+            /* flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between; */
+        }
+
+        .vl {
+            width: 1px;
+            height: 470px;
+            margin: 67px 2px 0 1px;
+            background-color: #f15535;
+        }
+        .vl-ph {
+            width: 1px;
+            height: 470px;
+            margin: 13px 2px 0 1px;
+            background-color: #f15535;
+        }
+        a:hover{
+            color: #f15535;
+        }
+        a.active{
+            color: #f15535;
+        }
+
+        .xy-quick-links-ph ul, .xy-quick-links-ph li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .xy-quick-links-ph li {
+            height: 30px;
+            width: 200px;
+            background: red;
+            border: 1px solid #900;
+            -webkit-transition: all 0.18s ease-out;
+            -moz-transition: all 0.18s ease-out;
+            -ms-transition: all 0.18s ease-out;
+            -o-transition: all 0.18s ease-out;
+            transition: all 0.18s ease-out;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+        <script src="/index.js">
+        </script>
+</head>
+
+
+<body>
+    <div class="xy-section-col">
+            <div class="xy-quick-links">
+                <div class="vl"></div>
+                <div>
+                    <div style="padding-top: 50px;"><b>On this page</b></div>
+                    <div class="xy-li-style"><a href="#v30" data-xy-release class="xy-line-style" style="margin-top: 0px;">Release V 30.0</a></div>
+                    <div class="xy-li-style"><a href="#v29" data-xy-release class="xy-line-style">Release V 29.0</a></div>
+                    <div class="xy-li-style"><a href="#v28" data-xy-release class="xy-line-style">Release V 28.0</a></div>
+                    <div class="xy-li-style"><a href="#v27" data-xy-release class="xy-line-style">Release V 27.0</a></div>
+                    <div class="xy-li-style"><a href="#v26" data-xy-release class="xy-line-style">Release V 26.0</a></div>
+                    <div class="xy-li-style"><a href="#v25" data-xy-release class="xy-line-style">Release V 25.0</a></div>
+                    <div class="xy-li-style"><a href="#v24" data-xy-release class="xy-line-style">Release V 24.0</a></div>
+                    <div class="xy-li-style"><a href="#v23" data-xy-release class="xy-line-style">Release V 23.0</a></div>
+                    <div class="xy-li-style"><a href="#v22" data-xy-release class="xy-line-style">Release V 22.0</a></div>
+                    <div class="xy-li-style"><a href="#v21" data-xy-release class="xy-line-style">Release V 21.0</a></div>
+                </div>
+            </div>
+
+
+        <div class="xy-section">
+
+            <div class="xy-section-header">Release notes</div>
+
+            <div class="xy-quick-links-ph">
+                <div class="vl-ph"></div>
+                <div>
+                    <div><b>On this page</b></div>
+                    <div class="xy-li-style"><a href="#v30" class="xy-line-style" style="margin-top: 0px;">Release V 30.0</a></div>
+                    <div class="xy-li-style"><a href="#v29" class="xy-line-style">Release V 29.0</a></div>
+                    <div class="xy-li-style"><a href="#v28" class="xy-line-style">Release V 28.0</a></div>
+                    <div class="xy-li-style"><a href="#v27" class="xy-line-style">Release V 27.0</a></div>
+                    <div class="xy-li-style"><a href="#v26" class="xy-line-style">Release V 26.0</a></div>
+                    <div class="xy-li-style"><a href="#v25" class="xy-line-style">Release V 25.0</a></div>
+                    <div class="xy-li-style"><a href="#v24" class="xy-line-style">Release V 24.0</a></div>
+                    <div class="xy-li-style"><a href="#v23" class="xy-line-style">Release V 23.0</a></div>
+                    <div class="xy-li-style"><a href="#v22" class="xy-line-style">Release V 22.0</a></div>
+                    <div class="xy-li-style"><a href="#v21" class="xy-line-style">Release V 21.0</a></div>
+                </div>
+            </div>
+            <div class="xy-section-intro">
+                The following release notes cover the most recent changes on Stylist which includes enhancements, functionality and bug fixes.
+            </div>
+
+            <div class="xy-section-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id
+                est
+                laborum.
+            </div>
+
+                            <div id="v30">
+                                <div class="xy-table">
+                                    <div class="date">Tuesday Dec 6, 2022</div>
+                            
+                            
+                                    <div class="version">Build number: 30.0</div>
+                            
+                                    <div class="xy-section-content xy-section-content-row">
+                            
+                                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Fiscal Printer display [Italy]</b> <br>
+                                            Fiscal Printer display now shows the real time order value for Italy.
+                                        </div>
+                            
+                                    </div>
+                            
+                                    <div class="xy-section-content xy-section-content-row">
+                            
+                                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Additional check on generation of Invoices [Italy]</b> <br>
+                                            An Additional check is implemented on the view confirmation page to disallow user from generating an invoice and Tax
+                                            Free without printing the receipt.
+                                        </div>
+                            
+                                    </div>
+                            
+                                    <div class="xy-section-content xy-section-content-row">
+                            
+                                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Fixed POS - Automatic scan on entering the cart</b> <br>
+                                            On the Fixed POS, when opening a new cart, the user can start scanning without the additional step of first clicking on
+                                            the scan field.
+                                        </div>
+                            
+                                    </div>
+
+                                    <div class="xy-section-content xy-section-content-row">
+                                    
+                                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Order Lines</b> <br>
+                                            The Order Lines page has two new changes:
+                                            <ul>
+                                                <li>Date Headers are now added</li>
+                                                <li>Quantity is moved to the right under the price</li>
+                                            </ul>
+                                        </div>
+                                    
+                                    </div>
+
+
+                                    <div class="xy-section-content xy-section-content-row">
+                            
+                                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Print Queue [Italy]</b> <br>
+                                            Print Queue:
+                                            <ul>
+                                                <li>The print receipt button on the view confirmation is now disabled for Italy.</li>
+                                                <li>A new button is added in the burger menu, where the user can go to check all the receipts in errors and then decide if
+                                                they need to print the receipt or just enter the fiscal number for that order.</li>
+                                            </ul>
+                                        </div>
+                            
+                                    </div>
+
+                                    <div class="xy-section-content xy-section-content-row">
+                                    
+                                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>New Store Close</b> <br>
+                                            <ul>
+                                               <li>Italy Stores:</li>
+                                                    <ul>
+                                                        <li>The user can now reopen the till and close the till any number of times. (Multiple Till Closure).</li>
+                                                        <li>The user will not be able to close the till without printing all the receipts that are in error.</li>
+                                                        <li>A new store totals page is implemented in the store close that gives better visibility into the payment totals for the day.</li>
+                                                    </ul>
+                                                <li>Non - Italy Stores:</li>
+                                                <ul>
+                                                    <li>A new store totals page is implemented in the store close that gives better visibility into the payment totals for the
+                                                    day</li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="xy-section-content xy-section-content-row">
+                                    
+                                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Order Timeline</b> <br>
+                                            A new feature is added onto the contextual menu in the order profile where the user can check the history of changing
+                                            customers and sales associate post sale. This Feature can be accessed by only the Managers.
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="xy-section-content xy-section-content-row">
+                                    
+                                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Foreign Currency</b> <br>
+                                            A new payment option called Foreign Currency is added in the payments page, where a customer can pay with foreign
+                                            currencies that are configured for that store
+                                        </div>
+                                    
+                                    </div>
+                            
+                                    <div class="xy-section-content xy-section-content-row">
+                            
+                                        <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                            <b>Scanning speed issue in the cart on the Fixed POS</b> <br>
+                                            Scanning items in the cart is now optimized to be much faster on the Fixed POS
+                                        </div>
+                            
+                                    </div>
+                            
+                                </div>
+                            </div>
+
+                <div id="v29">
+                    <div class="xy-table">
+
+                        <div class="date">Tuesday Oct 25, 2022</div>
+
+
+                        <div class="version">Build number: 29.0</div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>Latest iOS version 16 Compatibility</b> <br>
+                                XY Stylist is now compatible with the latest iOS version 16.
+                            </div>
+                        </div>
+
+                                <div class="xy-section-content xy-section-content-row">
+                                    <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+
+                                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                        <b>Missing promotion on order lines in the Return Cart</b> <br>
+                                        We have fixed the bug in the return cart where the item which had a promotion in the initial
+                                        sale was missing the
+                                        promotion in the return cart when additional items were added in the return cart with a
+                                        discount.
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+
+                <div id="v28">
+                    <div class="xy-table">
+
+                        <div class="date">Tuesday Oct 6, 2022</div>
+
+
+                        <div class="version">Build number: 28.0</div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>We have added a control on who can change the sales associate post purchase.</b> <br>
+                                Only general managers and cashiers can change the associate post purchase.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="v27">
+                    <div class="xy-table">
+
+                        <div class="date">Tuesday Oct 4, 2022</div>
+                        <div class="version">Build number: 27.0</div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>Contextual Menu options</b> <br>
+                                Focus here is to have only the options specific to the page the user is in.
+                                <ul>
+                                    <li>The contextual menu in every page has been changed to show only the options specific to
+                                        that page.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Improved Usability for open orders preview pods on the home page</b> <br>
+                        The Open Orders pods have been grouped to accommodate showing more information and functionality
+                        above the fold on the
+                        homepage. <br>
+                        To see all the Open Orders pods > Click on the stack of open orders and then select the order.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Access Control</b> <br>
+                        We have added a control on who can change the sales associate post purchase.
+                        <ul>
+                            <li>Only general managers and cashiers can change the associate post purchase.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Alert for a Tax Exempt Order</b> <br>
+                        The user will now get a reminder saying, "For a Tax exempt order the invoice must be generated"
+                        on clicking on the Tax
+                        Exemption button.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Alert if product size is not selected in the Product Display Page</b> <br>
+                        If the user clicks on 'Add to Cart' without selecting the size, the system will throw an alert
+                        to select the size.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Receipts</b> <br>
+                        The receipts have been updated to include the item code (style/fabric/color/size).
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Alert if user clicks on the buy button with an item with 0 price the cart</b> <br>
+                        Focus here is to help the sales associates identify if there is an item with 0 price in the
+                        cart.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Alert to download the latest version of the app</b> <br>
+                        Focus here is to help the user know that they need to download the latest version of the app.
+                        <ul>
+                            <li>Users with the older version of the app should now see a Pop-up Alert saying "You are on
+                                an older version of the App,
+                                please update to the latest version"</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>About page</b> <br>
+                        Focus here is to give the user more information regarding the latest release. The version number
+                        from the contextual
+                        menu is removed and moved inside the new About page. <br> 
+                        <ul>
+                        <li>The user can click on 'About' from the contextual menu which will lead them to the About page
+                        which consists of the
+                        following information:</li> <br>
+                        <ul>
+                            <li>The release notes for the latest version.</li>
+                            <li>The latest app version number.</li>
+                            <li>The build version that the user is currently on.</li>
+                        </ul> <br>
+                       <li>We will continue to add more info on the About page based on additional user requests as needed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Associate search by partial name in the cart</b> <br>
+                        The user can now find the associate by searching by partial name. For example: Camilla Valerio
+                        can be searched by typing
+                        'Camil'.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Planet Errors</b> <br>
+                        The bug where some planet errors were not showing is now fixed to show all errors.
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Special Characters on notes and invoices</b> <br>
+                        Special characters are now supported on both Notes feature and on the Invoices.
+
+                    </div>
+
+                </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Cash Drawer</b> <br>
+                            Cash drawer is now configured to open only if the customer pays by cash.
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <div id="v26">
+                <div class="xy-table">
+
+                    <div class="date">Tuesday Aug 30, 2022</div>
+
+
+                    <div class="version">Build number: 26.0</div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Improved UI for Discount options</b> <br>
+                            Focus here is to see all the discounts percentages on the same page making it easier now to
+                            select the right percentage. <br>
+                            A drop down is now added to add the discount percentage in the Add Discount page.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Improved UI on order profile page</b> <br>
+                        Focus here is to make sure the order profile page is an accurate recap of the sales/return cart
+                        <ul>
+                            <li>The order profile page now shows if it's a 'Carry Out' order or a 'Return In Store'
+                                along with the
+                                number of items in
+                                that order just like how it was shown in the cart.</li>
+                            <li>UPC is added on each item card to help the sales associates when looking into the order
+                                profile.</li>
+                            <li>Add Note feature is added on the order profile to help the associate add notes after the
+                                sale is
+                                completed.</li>
+                            <li>The associate can now add the Omnichannel Reason on the order profile page after the
+                                sale is completed.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Cash Drawers will be opened for every cash payment made on the fixed POS</b> <br>
+                        Focus here is to enhance the user experience for a cashier
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Products page item transactions</b> <br>
+                        Focus here is to help the associate view all the sales for a particular product.
+                        <ul>
+                            <li>The user can go into any product, click on 'Item Transactions' and click on 'View Sales'
+                                to view all the order lines for
+                                that product in the current store.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Cashier name on cards and receipt</b> <br>
+                        Focus here is to add more detail to each transaction
+                        <ul>
+                            <li>Every order will have the cashier name if the sale is closed by the cashier.</li>
+                            <li>The Cashier name is now added to the receipt as well.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Add Discount and Tax Exemption in the Return Cart</b> <br>
+                        Focus here is to let the sales associate add a discount in the return cart in case the item sold
+                        during promotions is
+                        returned when the promotions have ended.
+                    </div>
+
+                </div>
+
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Order Lines added in the burger menu, Inventory Lookup, Customer Info, User Profile</b> <br>
+                        Focus here is to help the user see all the items sold in one place.
+                        <ul>
+                            <li> <b>Burger menu:</b> On clicking the Order Lines button, all the items sold across all
+                                stores can be viewed. The user can filter
+                                by <b>My Store</b>, <b>All Orders</b> and <b>My Orders.</b> On clicking on any item, the
+                                user will be taken directly to the order profile.</li>
+                            <li><b>Inventory Lookup:</b> Order Lines are now added where the user can view all the order
+                                lines for that product across all stores.</li>
+                            <li><b>Customer Info:</b> Order Lines are now added where the user can view all the items
+                                sold to the customer across all stores.</li>
+                            <li><b>User Profile:</b>Order Lines are now added under 'Related Links' where the sales
+                                associate can view all the items sold by them.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Planet Errors are now shown on Stylist</b> <br>
+                        Focus here is to let the associate know what went wrong in the Planet Tax Free transaction.
+                        <ul>
+                            <li>Planet errors if any will be shown on the same Planet tab on the view confirmation page.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xy-section-content xy-section-content-row">
+
+                    <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                    <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                        <b>Omnichannel Reason</b> <br>
+                        Focus here is to help the business know through what channel the customer has come to the store.
+                        <ul>
+                            <li>A new feature is added on the cart page under 'Omnichannel Reason'. The user can select
+                                the reason by just clicking on
+                                the dropdown next to 'Select Reason'.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+                <div id="v25">
+
+                    <div class="xy-table">
+
+                        <div class="date">Tuesday Aug 18, 2022</div>
+
+
+                        <div class="version">Build number: 25.0</div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>Change Associate from Cart Page</b> <br>
+                                Simply click your name on the bottom bar after you are done scanning your items and you
+                                will be shown a pop up panel
+                                with all the associates in store. You can select the name of your colleague and continue
+                                scanning.
+                            </div>
+
+                        </div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>Change Associate from contextual menu</b> <br>
+                                Partial First Name and Last Name search is now live. Selection is now made easier - one
+                                tap is all it takes.
+                            </div>
+
+                        </div>
+
+                        <div class="xy-section-content xy-section-content-row">
+
+                            <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                            <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                                <b>Next Manual Payment</b> <br>
+                                Diners Club is now removed as a payment method from payment types.
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+            <div id="v24">
+                <div class="xy-table">
+                    <div class="date">Tuesday Jul 30, 2022</div>
+
+
+                    <div class="version">Build number: 24.0</div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Amsterdam planet invoice print</b> <br>
+                            Amsterdam planet invoice print issue resolved.
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="v23">
+                <div class="xy-table">
+                    <div class="date">Tuesday Jul 26, 2022</div>
+
+
+                    <div class="version">Build number: 23.0</div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Tax free order</b> <br>
+                            Automatic void is implemented now when returning a Tax free order.
+                        </div>
+
+                    </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Generate planet invoive</b> <br>
+                            User can now generate and print a planet invoice successfully after a void.
+                        </div>
+
+                    </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Tax free history</b> <br>
+                            User can now see the Tax free history in the view confirmation page and print the
+                            invoice/credit note of their choice by
+                            clicking on the "Print" button.
+                        </div>
+
+                    </div>
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Thermal Planet invoice</b> <br>
+                            Thermal Planet invoice for Berlin and Amsterdam is available now.
+                        </div>
+
+                    </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-3">BUG FIX</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Planet issue</b> <br>
+                            Planet issue where it would say pending after returning to POS is fixed now
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="v21">
+                <div class="xy-table">
+                    <div class="date">Tuesday Jun 29, 2022</div>
+
+
+                    <div class="version">Build number: 21.0</div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Add notes</b> <br>
+                            Notes on orders, consignments, reservations and open orders
+                        </div>
+
+                    </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-1">ENHANCEMENT</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Invoice copy</b> <br>
+                            Invoice copy now says COPY on the invoice.
+                        </div>
+
+                    </div>
+               
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Consignments</b> <br>
+                            Feature for product cansignments is added on stylist
+                        </div>
+
+                    </div>
+
+                    <div class="xy-section-content xy-section-content-row">
+
+                        <div class="about-tags about-tags-margin announcement-2">FEATURE</div>
+                        <div class="xy-section-content" style="margin-top: 0; margin-bottom: 0%;">
+                            <b>Reservations</b> <br>
+                            Feature for product reservations is added on stylist
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
